@@ -7,7 +7,22 @@ const initialState = {
 }
 
 // Reducer 
-const rootReducer = (state = this.initialState, action) => { return state }
+const rootReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'ADD_AGE':
+            return {
+                ...state,
+                age: state.age + 1
+            }
+        case 'CHANE_VALUE':
+            return {
+                ...state,
+                value: state.value + action.newValue
+            }
+        default:
+            return state;
+    }
+}
 
 // Store
 const store = createStrore(rootReducer);
