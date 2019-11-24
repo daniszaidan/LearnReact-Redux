@@ -9,3 +9,6 @@ const initialState = {
 // Reducer 
 const rootReducer = (state = this.initialState, action) => { return state }
 
+// Store
+const store = createStrore(rootReducer);
+console.log(store.getState());
