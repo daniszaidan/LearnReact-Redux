@@ -6,3 +6,6 @@ const initialState = {
     age: 20
 }
 
+// Reducer 
+const rootReducer = (state = this.initialState, action) => { return state }
+
