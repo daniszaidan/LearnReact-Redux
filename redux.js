@@ -31,3 +31,4 @@ console.log(store.getState());
 // Dispatching Action
 store.dispatch({ type: 'ADD_AGE' });
 store.dispatch({ type: 'CHANE_VALUE', newValue: 12 });
+console.log(store.getState());
