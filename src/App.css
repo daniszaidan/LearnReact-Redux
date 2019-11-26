@@ -1,22 +1,32 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid black;
 }
-
-.App-logo {
-  height: 40vmin;
+.row{
+  display: table;
+  clear: both;
+  margin-top: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card{
+  width: 200px;
+  height: auto;
+  overflow: hidden;
+  float: left;
 }
-
-.App-link {
-  color: #09d3ac;
+.card img{
+  width: 100%;
+  height: auto;
+}
+.counter{
+  width: 100%;
+  display: table;
+  clear: both;
+}
+.counter button, .counter p{
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
 }
