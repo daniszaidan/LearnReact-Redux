@@ -28,6 +28,12 @@ const rootReducer = (state = initialState, action) => {
 const store = createStrore(rootReducer);
 console.log(store.getState());
 
+// Subscription
+store.subscribe(() => {
+    console.log('store change : ', store.getState());
+
+})
+
 // Dispatching Action
 store.dispatch({ type: 'ADD_AGE' });
 store.dispatch({ type: 'CHANE_VALUE', newValue: 12 });
