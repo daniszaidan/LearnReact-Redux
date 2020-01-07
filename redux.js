@@ -1,5 +1,5 @@
 const redux = require('redux');
-const createStrore = redux.createStore;
+const createStore = redux.createStore;
 
 const initialState = {
     value: 0,
@@ -25,7 +25,7 @@ const rootReducer = (state = initialState, action) => {
 }
 
 // Store
-const store = createStrore(rootReducer);
+const store = createStore(rootReducer);
 console.log(store.getState());
 
 // Subscription
