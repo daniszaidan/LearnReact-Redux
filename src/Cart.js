@@ -1,12 +1,21 @@
 import React from 'react';
 import './App.css';
+import { connect } from "react-redux";
 
-function Cart() {
-    return (
-        <div className="cart">
-            <p>cart : <span>10</span></p>
-        </div>
-    );
+class Cart extends React.Component {
+    render() {
+        return (
+            <div className="cart" >
+                <p>cart : <span> {this.props.order} </span></p>
+            </div>
+        )
+    }
 }
 
-export default Cart;
+const mapStateToProps = (state) => {
+    return {
+        order: state.totalOrder
+    }
+}
+
+export default connect(mapStateToProps)(Cart);
