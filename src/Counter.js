@@ -14,8 +14,18 @@ class Counter extends React.Component {
                     {this.props.order}
                 </p>
                 <button onClick={this.props.handlePlus}>+</button>
+                <br />
+                <button onClick={this.props.handleDelay} style={{ width: 150 }}>delay add</button>
             </div>
         )
+    }
+}
+
+const delayAdd = () => {
+    return (dispatch) => {
+        setTimeout(() => {
+            return dispatch({ type: ActionType.PLUS_ORDER_DELAY, value: 5 })
+        }, 2000);
     }
 }
 
@@ -29,6 +39,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         handlePlus: () => dispatch({ type: ActionType.PLUS_ORDER }),
         handleMinus: () => dispatch({ type: ActionType.MINUS_ORDER }),
+        handleDelay: () => dispatch(delayAdd()),
     }
 }
 

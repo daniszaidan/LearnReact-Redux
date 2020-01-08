@@ -19,6 +19,11 @@ const rootReducer = (state = globalState, action) => {
                     totalOrder: state.totalOrder - 1
                 }
             }
+        case ActionType.PLUS_ORDER_DELAY:
+            return {
+                ...state,
+                totalOrder: state.totalOrder + action.value
+            }
         default:
             return state;
     }
