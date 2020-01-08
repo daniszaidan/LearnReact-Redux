@@ -21,12 +21,10 @@ class Counter extends React.Component {
     }
 }
 
-const delayAdd = () => {
-    return (dispatch) => {
-        setTimeout(() => {
-            return dispatch({ type: ActionType.PLUS_ORDER_DELAY, value: 5 })
-        }, 2000);
-    }
+const delayAdd = () => (dispatch) => {
+    setTimeout(() => {
+        return dispatch({ type: ActionType.PLUS_ORDER_DELAY, value: 5 })
+    }, 2000);
 }
 
 const mapStateToProps = (state) => {
